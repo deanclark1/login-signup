@@ -31,11 +31,11 @@ function Login(){
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
-                        <h5>Log In</h5>
-                        <form>
+                        <h2 className="text-center">Log In</h2>
+                        <form className="pt-3">
                             <div className="form-row">
-                                <div className="form-group col-12 pr-lg-2">
-                                    <label for="inputFirstName">Email address:</label>
+                                <div className="form-group col-12">
+                                    <label >Email address:</label>
                                     <input 
                                         className="form-control mb-2"
                                         type="text"
@@ -45,7 +45,7 @@ function Login(){
                                     />
                                 </div>
                                 <div className="form-group col-12">
-                                    <label for="inputLastName">Password:</label>
+                                    <label >Password:</label>
                                     <input 
                                         className="form-control mb-2"
                                         type="password"
@@ -56,12 +56,12 @@ function Login(){
                                 </div>
                             </div>
                             <div className="">
-                                <button className="btn btn-dark" type="submit" onClick={handleLoginClick} >
+                                <button className="btn btn-dark login-submit" type="submit" onClick={handleLoginClick} >
                                     Login
                                 </button>
                             </div> 
-                            <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
-                            <div>
+                            <p  className="pt-1">Don't have an account? <Link to="/signup">Sign Up</Link></p>
+                            <div  className="">
                                 <span>{alert}</span>
                             </div>  
                         </form>

@@ -8,14 +8,12 @@ function HomePage() {
   
   
     return (
-      <div>
-          <div className="d-flex">
-              <div className="weather-input">
-                <h3 className="py-3">Welcome, {setUser.firstName}  </h3>
-              </div>
-          </div>
-         
-      </div>
+        <div className="homePage">
+            <div className="text-center pt-5">
+                <h1 className="py-3">Welcome, {setUser.firstName} </h1>
+            </div>
+        </div>
+       
     );
 }
   

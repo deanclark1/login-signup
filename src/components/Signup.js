@@ -48,68 +48,72 @@ function Signup() {
     <div className="SignUpPage">
         <div className="container-fluid">
             <div className="row">
-                <form>
-                    <div className="form-row">
-                        <div className="form-group col-md-6 pr-lg-2">
-                            <label for="inputFirstName">First Name:</label>
-                            <input 
-                                className="form-control mb-2"
-                                type="text"
-                                value={firstName}
-                                placeholder="First Name"
-                                onChange={handlefirstName}
-                                required
-                            />
+                <div className="col-12 ">
+                    <h2 className="text-center">Sign Up</h2>
+                    <form className="pt-3">
+                        <div className="form-row">
+                            <div className="form-group col-md-6 pr-lg-2">
+                                <label >First Name:</label>
+                                <input 
+                                    className="form-control mb-2"
+                                    type="text"
+                                    value={firstName}
+                                    placeholder="First Name"
+                                    onChange={handlefirstName}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group col-md-6">
+                                <label >Last Name:</label>
+                                <input 
+                                    className="form-control mb-2"
+                                    type="text"
+                                    value={lastName}
+                                    placeholder="Last Name"
+                                    onChange={handleLastName}
+                                    required
+                                />
+                            </div>
                         </div>
-                        <div className="form-group col-md-6">
-                            <label for="inputLastName">Last Name:</label>
-                            <input 
-                                className="form-control mb-2"
-                                type="text"
-                                value={lastName}
-                                placeholder="Last Name"
-                                onChange={handleLastName}
-                                required
-                            />
-                        </div>
-                    </div>
-                    <div className="form-row">
+                        <div className="form-row">
                         
-                        <div className="form-group col-md-6">
-                            <label for="inputLastName">Email:</label>
-                            <input 
-                                className="form-control mb-2"
-                                type="email"
-                                value={email}
-                                placeholder="Email"
-                                onChange={handleEmail}
-                                required
-                            />
+                            <div className="form-group col-md-6">
+                                <label >Email:</label>
+                                <input 
+                                    className="form-control mb-2"
+                                    type="email"
+                                    value={email}
+                                    placeholder="Email"
+                                    onChange={handleEmail}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group col-md-6 pr-lg-2">
+                                <label >Password:</label>
+                                <input
+                                    className="form-control mb-2"
+                                    type="password"
+                                    value={password}
+                                    placeholder="Password"
+                                    onChange={handlePassword}
+                                    required
+                                />
+                            </div>
                         </div>
-                        <div className="form-group col-md-6 pr-lg-2">
-                            <label for="inputFirstName">Password:</label>
-                            <input
-                                className="form-control mb-2"
-                                type="password"
-                                value={password}
-                                placeholder="Password"
-                                onChange={handlePassword}
-                                required
-                            />
-                        </div>
-                    </div>
-                    <div>
-                        {/* <Link to='/login'>  */}
-                        <button className="btn btn-dark pb-1" onClick={onSignUp}>Sign Up</button>
-                        {msg ? <span>{handleMsg()}</span> : null}
-                        {/* </Link> */}
-                      </div>
-          
-                       <div>
-                        Already have an account? <Link to="/login">Login here</Link>
-                      </div>
-                </form>
+                        <div className="pt-1">
+                           
+                            <button className="btn btn-dark signup-submit mb-2" onClick={onSignUp}>Sign Up</button>
+                            {msg ? <span  className="">{handleMsg()}</span> : null}
 
+                        </div>
+          
+                        <div  className="">
+                            Already have an account? <Link to="/login">Login here</Link>
+                        </div>
+                    </form>
+
+                </div>
+                
             </div>
         </div>
     </div>

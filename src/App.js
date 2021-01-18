@@ -11,7 +11,7 @@ import "./index.css";
 function App() {
   const [isLogin, setLoginState] = useState(false);
   const [authUser, setAuthUser] = useState("");
- 
+  
   function handleLoginstate(isLogin, user) {
     setLoginState(isLogin);
     setAuthUser(user);
@@ -20,22 +20,24 @@ function App() {
     <div className="App">
 
       <Router>
-        <Navbar {...{ handleLoginstate, isLogin }} />
-        <Switch>
-          <Route path="/" exact component={() => (
-            <HomePage
-              isLogin={isLogin}
-              username={typeof authUser === "object" ? authUser.name : null}
+          <Navbar {...{ handleLoginstate, isLogin }} />
+          <Switch>
+            <Route
+              exact
+              path="/"
+              component={() => (
+                <HomePage
+                  isLogin={isLogin}
+                  username={typeof authUser === "object" ? authUser.name : null}
+                />
+              )}
             />
-          )} />
-
-          <Route path="/signup" component={Signup} />
-          <Route
-            path="/login"
-            component={() => <Login handleLoginstate={handleLoginstate} />}
-          />  
-         
-        </Switch>
+            <Route path="/signup" component={Signup} />
+            <Route
+              path="/login"
+              component={() => <Login handleLoginstate={handleLoginstate} />}
+            />
+          </Switch>
       </Router>
 
     </div>
