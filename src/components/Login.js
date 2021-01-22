@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-function Login(){
+function Login({ handleLoginstate }){
 
     const [email, setEmail] = useState(""),
     [password, setPassword] = useState(""),
@@ -20,6 +20,7 @@ function Login(){
         e.preventDefault();
         let users = JSON.parse(localStorage.getItem("users"));
         if( password === users.password && email === users.email){
+        handleLoginstate(true, users);
         history.push("/");
 
         }else{

@@ -10,11 +10,9 @@ import "./index.css";
 
 function App() {
   const [isLogin, setLoginState] = useState(false);
-  const [authUser, setAuthUser] = useState("");
   
-  function handleLoginstate(isLogin, user) {
+  function handleLoginstate(isLogin) {
     setLoginState(isLogin);
-    setAuthUser(user);
   }
   return (
     <div className="App">
@@ -27,8 +25,6 @@ function App() {
               path="/"
               component={() => (
                 <HomePage
-                  isLogin={isLogin}
-                  username={typeof authUser === "object" ? authUser.name : null}
                 />
               )}
             />
